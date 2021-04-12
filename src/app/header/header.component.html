@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span style="cursor:pointer" (click)="moveToPortal()">Online Health Care</span>
+
+    <a *ngIf="!userIsAuthenticated"  mat-button routerLink="/login">Doctor Login</a>
+
+    <a  *ngIf="userIsAuthenticated" mat-button routerLink="/logout" (click)="logout()">Logout</a>
+
+  </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,15 @@
+<div *ngIf="doctors.length != 0">
+  <div class="card" style="width: 18rem;" *ngFor="let doctor of doctors">
+
+    <img class="card-img-top" src="https://www.nicepng.com/png/full/867-8678512_doctor-icon-physician.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{ doctor.doctor_name}}</h5>
+
+      <a class="btn btn-primary" (click)="showDoctorDetails(doctor.doctor_name, doctor.doctor_id)">Book Appointment</a>
+
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="doctors.length <= 0"> No doctors Found!</div>

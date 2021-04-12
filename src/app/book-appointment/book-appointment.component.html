@@ -1,0 +1,136 @@
+<h3>Appointment for :  {{selectedDoctor}} </h3>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <mat-toolbar>
+        <span>Appointment Form</span>
+      </mat-toolbar>
+      <mat-card>
+        <form (submit)="onSubmit(appointmentForm)" #appointmentForm="ngForm">
+
+          <mat-form-field>
+            <input
+            matInput
+            [matDatepicker]="picker"
+            name="date"
+            placeholder="Date"
+            (dateChange)="setDate($event)"
+            required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+
+          </mat-form-field>
+
+          <label>
+            Time
+            <input name="time" [owlDateTimeTrigger]="dt4" [owlDateTime]="dt4" [(ngModel)]="selectedTime" (dateTimeChange)="setTime(dt4)">
+            <owl-date-time [pickerType]="'timer'" #dt4></owl-date-time>
+          </label>
+
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="name"
+              required
+              minlength="1"
+              placeholder="Patient Name"
+              #name="ngModel">
+            <mat-error *ngIf="name.invalid">Please enter patient name!</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              type="email"
+              ngModel
+              name="email"
+              required
+              minlength="1"
+              placeholder="Email ID"
+              #email="ngModel">
+            <mat-error *ngIf="email.invalid">Please enter email!</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              type="text"
+              ngModel
+              name="number"
+              required
+              minlength="1"
+              maxlength="10"
+              placeholder="Phone Number"
+              #number="ngModel">
+            <mat-error *ngIf="number.invalid">Please enter phone number!</mat-error>
+          </mat-form-field>
+
+          <button mat-raised-button
+                  type="submit"
+                  color="primary">Submit
+          </button>
+
+          <button mat-raised-button
+                  type="submit"
+                  color="primary" (click)="resetForm(appointmentForm)">Cancel
+          </button>
+        </form>
+      </mat-card>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+<!-- <div *ngIf="showCommentPanel">
+  <mat-card>
+    <form (submit)="onAddComment(commentForm)" #commentForm="ngForm">
+      <mat-form-field>
+      <textarea
+        matInput
+        rows="2"
+        ngModel
+        name="comment"
+        required
+        placeholder="Comment"
+        #comment="ngModel">
+      </textarea>
+        <mat-error *ngIf="comment.invalid">Please enter comment!</mat-error>
+      </mat-form-field>
+      <button mat-raised-button
+              type="submit"
+              color="primary">Save
+      </button>
+      <button mat-raised-button
+              type="submit"
+              color="primary" (click)="cancelComment()">Cancel
+      </button>
+    </form>
+
+  </mat-card>
+</div> -->
+
+
+<!-- <mat-accordion multi="true" *ngIf="movieComments.length > 0">
+  <mat-expansion-panel *ngFor="let comment of movieComments">
+    <mat-expansion-panel-header>
+
+    </mat-expansion-panel-header>
+    <p> Comment </p>
+    <p> rated </p>
+    <p> Liked </p>
+    <p> Disliked </p>
+
+    <button mat-button *ngIf="userType == 'administrator'" color="warn" (click)="deleteComment(comment.comment_id)">Delete</button>
+
+  </mat-expansion-panel>
+</mat-accordion> -->
+
