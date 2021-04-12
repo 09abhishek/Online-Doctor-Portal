@@ -1,0 +1,6 @@
+[{"user_id":11, "name":"Dr. A.Kumar", "email":"a@gmail.com", "password":"123456789"},
+ {"user_id":12, "name":"Dr. Manu Lakshmi", "email":"manu@gmail.com", "password":"123456789"},
+ {"user_id":13, "name":"Dr. Umesh Varma", "email":"umesh@gmail.com", "password":"000000000"},
+ {"user_id":14, "name":"Dr. Durgesh Kumar", "email":"admin@gmail.com", "password":"admin"},
+ {"user_id":15, "name":"Dr. Urmila", "email":"urmila@gmail.com", "password":"123456789"},
+ {"user_id":16, "name":"Dr.Abhi", "email":"abhi", "password":"abhi"}]

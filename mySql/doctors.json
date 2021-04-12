@@ -1,0 +1,5 @@
+[{"doctor_id":11, "doctor_name":"Dr. A.Kumar", "user_id":11, "appointment_slot_time":"15", "day_start_time":"08:00:00", "day_end_time":"15:00:00"},
+ {"doctor_id":12, "doctor_name":"Dr. Manu Lakshmi", "user_id":12, "appointment_slot_time":"30", "day_start_time":"09:00:00", "day_end_time":"15:00:00"},
+ {"doctor_id":13, "doctor_name":"Dr. Umesh Varma", "user_id":13, "appointment_slot_time":"15", "day_start_time":"10:00:00", "day_end_time":"16:00:00"},
+ {"doctor_id":14, "doctor_name":"Dr. Durgesh Kumar", "user_id":14, "appointment_slot_time":"15", "day_start_time":"09:00:00", "day_end_time":"14:00:00"},
+ {"doctor_id":15, "doctor_name":"Dr. Urmila", "user_id":15, "appointment_slot_time":"45", "day_start_time":"09:00:00", "day_end_time":"15:00:00"}]
