@@ -91,7 +91,7 @@ export class SummaryReportComponent implements OnInit {
         for(let data in dateObj) {
           finalObject.push({'Date' : data, ...dateObj[data]});
         }
-        this.dataSource = finalObject;
+         this.dataSource = new MatTableDataSource(<any> finalObject);
       });
 
     }
